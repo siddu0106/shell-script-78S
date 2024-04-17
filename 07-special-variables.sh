@@ -19,3 +19,5 @@ echo "Hostname/IPaddress of the server : $HOSTNAME"
 echo "Process ID of current shell script : $$"
 
 sleep 60
+
+date
