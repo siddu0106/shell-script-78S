@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Declaring the values inside the script - one way
 person1=siddu
 person2=seeta
 
