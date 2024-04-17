@@ -7,6 +7,7 @@ then
     echo "number $NO is greater than 10"
 else
     echo "number $NO is less than 10"
+    exit 1
 fi
 
 echo "Exit status of previous command : $?"
