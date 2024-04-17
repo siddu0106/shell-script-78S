@@ -7,5 +7,6 @@ person2=seeta
  echo "$person1: Hey ${person2} how are you"
  echo "$person2: Hey $person1 how are you"
 
-
+# if u want to use specific datatype strictly then
+# declare -i x=$1
 
