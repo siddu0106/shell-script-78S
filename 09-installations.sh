@@ -10,11 +10,22 @@ else
     echo "Root user"
 fi
 
-dnf install mysql -y
+dnf install mysqll -y
 
 if [ $? -ne 0 ]
 then    
     echo "Mysql Installation is failed..."
+    exit 1
+else 
+    echo "Mysql Installation is Success..."
+fi
+
+dnf install git -y
+
+if [ $? -ne 0 ]
+then    
+    echo "Mysql Installation is failed..."
+    exit 1
 else 
     echo "Mysql Installation is Success..."
 fi
