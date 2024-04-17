@@ -18,9 +18,8 @@ echo "Hostname/IPaddress of the server : $HOSTNAME"
 
 echo "Process ID of current shell script : $$"
 
-sleep 10 
+sleep 10& 
 
 date
 
 echo "Process ID of last background command : $!"
- sleep 10&
