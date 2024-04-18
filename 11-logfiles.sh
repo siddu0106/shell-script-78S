@@ -1,7 +1,7 @@
 #!/bin/bash
 
 DATE=$(date +%F-%H-%M-%S)
-SCRIPT_NAME=$(echo $0 | cut -d . -f 1)
+SCRIPT_NAME=$(echo $0 | cut -d "." -f 1)
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 USER=$(id -u)
@@ -25,10 +25,10 @@ VALIDATE()
     fi
 }
 
-dnf install mysql -y &>>$LOGFILE
+dnf install mysql -y &>> $LOGFILE
 
 VALIDATE $? "Mysql Installation"
 
-dnf install git -y &>>$LOGFILE
+dnf install git -y &>> $LOGFILE
 
 VALIDATE $? "Git Installation"
