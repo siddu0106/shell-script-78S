@@ -29,10 +29,12 @@ VALIDATE()
     fi
 }
 
-dnf install mysql -y &>> $LOGFILE # > - is for redirection, >> - append
+for i in $@
+do
+    dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
+    VALIDATE $? $i
+    yum list installed $i   
+done
 
-VALIDATE $? "Mysql Installation"
 
-dnf install git -y &>> $LOGFILE
 
-VALIDATE $? "Git Installation"
