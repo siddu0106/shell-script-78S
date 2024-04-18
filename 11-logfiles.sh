@@ -12,7 +12,7 @@ USER=$(id -u)
 
 if [ $USER -ne 0 ]
 then 
-    echo " $R Be a root user to install any package... $N"
+    echo -e " $R Be a root user to install any package... $N"
     exit 1 # manually stop without continue
 else 
     echo "Root user"
