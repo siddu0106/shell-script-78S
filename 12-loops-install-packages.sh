@@ -31,9 +31,14 @@ VALIDATE()
 
 for i in $@
 do
-    dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
-    VALIDATE $? $i
-    yum list installed $i   
+    yum list installed $i 
+    if [ $? -ne 0 ]
+    then
+        dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
+        VALIDATE $? $i 
+    else
+        echo "$i is already installed..." 
+    fi 
 done
 
 
