@@ -36,7 +36,7 @@ do
     if [ $? -ne 0 ]
     then
         dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
-        VALIDATE $? $i 
+        VALIDATE $? "Installation of $i" 
     else
         echo -e "$i is already $Y installed...$N" 
     fi 
