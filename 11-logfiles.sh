@@ -5,7 +5,7 @@ SCRIPT_NAME=$(echo $0 | cut -d "." -f 1) # removing .sh in file name
 LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
-G="\e[30m"
+G="\e[32m"
 N="\e[0m"
 
 USER=$(id -u)
