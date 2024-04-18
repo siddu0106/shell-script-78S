@@ -32,7 +32,7 @@ VALIDATE()
 
 for i in $@
 do
-    yum list installed $i &>> $LOGFILE
+    dnf list installed $i &>> $LOGFILE
     if [ $? -ne 0 ]
     then
         dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
