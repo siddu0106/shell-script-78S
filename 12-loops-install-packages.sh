@@ -6,6 +6,7 @@ LOGFILE=/tmp/$SCRIPT_NAME-$DATE.log
 
 R="\e[31m"
 G="\e[32m"
+Y="\e[33m"
 N="\e[0m"
 
 USER=$(id -u)
@@ -37,7 +38,7 @@ do
         dnf install $i -y &>> $LOGFILE # > - is for redirection, >> - append
         VALIDATE $? $i 
     else
-        echo "$i is already installed..." 
+        echo -e "$i is already $Y installed...$N" 
     fi 
 done
 
