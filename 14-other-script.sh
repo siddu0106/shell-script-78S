@@ -1,6 +1,6 @@
 #!/bin/bash
 
-COURSE="Devops from other script"
+COURSE="Devops & AWS from other script"
 
-echo "Before executing other script : $COURSE"
+echo "Variable executing from other script : $COURSE"
 echo "Process Id of current script: $$"
